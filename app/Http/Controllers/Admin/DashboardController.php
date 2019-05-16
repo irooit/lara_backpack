@@ -15,7 +15,7 @@ class DashboardController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $this->data['title'] = 'hello world'; // set the page title
+        $this->data['title'] = trans('backpack::base.dashboard'); // set the page title
 
         return view('backpack::dashboard', $this->data);
     }
