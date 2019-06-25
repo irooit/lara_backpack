@@ -51,6 +51,16 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+
+        'admin' => [
+            'driver' => 'passport',
+            'provider' => 'admin'
+        ],
+
+        'member' => [
+            'driver' => 'passport',
+            'provider' => 'members'
+        ]
     ],
 
     /*
@@ -84,6 +94,15 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+        'admin' => [
+            'driver' => 'eloquent',
+            'model' => \Moell\Mojito\Models\AdminUser::class,
+        ],
+
+        'members' => [
+            'driver' => 'eloquent',
+            'model' => \App\Member::class
+        ]
     ],
 
     /*
